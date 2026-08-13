@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+.model-status{
+    margin:25px auto;
+    width:max-content;
+    padding:12px 25px;
+    border-radius:12px;
+    background:#f8fafc;
+    color:#2563eb;
+    font-size:16px;
+    font-weight:600;
+}
+
+.camera-section{
+    width:100%;
+    padding:130px 25px 80px;
+    background:#f8fafc;
+}
+
+.camera-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.camera-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.camera-header h1{
+    font-size:42px;
+    color:#111827;
+    margin-bottom:20px;
+}
+
+.camera-header p{
+    font-size:17px;
+    line-height:1.8;
+    color:#4b5563;
+}
+
+
+.camera-box{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+    background:#000;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+
+#camera{
+    width:100%;
+    display:block;
+}
+
+
+#camera-canvas{
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+
+.camera-controls{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin:35px 0;
+}
+
+
+.camera-controls button{
+    padding:15px 35px;
+    border-radius:12px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+
+.camera-controls button:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+
+.camera-results{
+    max-width:900px;
+    margin:40px auto 0;
+    padding:30px;
+    background:white;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+
+.camera-results h2{
+    color:#111827;
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+
+#camera-results{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+
+.camera-item{
+    padding:12px 20px;
+    border-radius:10px;
+    background:#eff6ff;
+    color:#2563eb;
+    font-weight:600;
+}
+
+
+@media(max-width:850px){
+
+    .camera-header h1{
+        font-size:32px;
+    }
+
+    .camera-header p{
+        font-size:15px;
+    }
+
+    .camera-controls{
+        flex-direction:column;
+    }
+
+    .camera-controls button{
+        width:100%;
+    }
+
+    .camera-results{
+        padding:20px;
+    }
+
+}

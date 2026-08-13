@@ -1,0 +1,157 @@
+let model = null;
+
+const imageUpload = document.getElementById("image-upload");
+const image = document.getElementById("preview-image");
+const canvas = document.getElementById("detection-canvas");
+const ctx = canvas.getContext("2d");
+const results = document.getElementById("results");
+const modelStatus = document.getElementById("model-status");
+
+async function loadModel(){
+
+    try{
+
+        if(modelStatus){
+
+            modelStatus.innerHTML = "Loading AI Model...";
+
+        }
+
+        model = await cocoSsd.load({
+            base:"lite_mobilenet_v2"
+        });
+
+        console.log("Model Loaded");
+
+        if(modelStatus){
+
+            modelStatus.innerHTML = "AI Model Ready ✓";
+
+        }
+
+    }catch(error){
+
+        console.log("Model Error",error);
+
+        if(modelStatus){
+
+            modelStatus.innerHTML = "AI Model Failed ✕";
+
+        }
+
+    }
+}
+
+loadModel();
+
+
+imageUpload.addEventListener("change",(event)=>{
+
+    const file = event.target.files[0];
+
+    if(file){
+
+        const reader = new FileReader();
+
+        reader.onload=(e)=>{
+
+            image.src=e.target.result;
+
+        };
+
+        reader.readAsDataURL(file);
+
+    }
+
+});
+
+
+image.addEventListener("load",async()=>{
+
+    if(!model){
+
+        return;
+
+    }
+
+
+    image.style.display="block";
+
+
+    canvas.width=image.clientWidth;
+    canvas.height=image.clientHeight;
+
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+
+    const predictions = await model.detect(image);
+
+
+    results.innerHTML="";
+
+
+    const scaleX = image.clientWidth / image.naturalWidth;
+    const scaleY = image.clientHeight / image.naturalHeight;
+
+
+    predictions.forEach((prediction)=>{
+
+
+        const x = prediction.bbox[0] * scaleX;
+        const y = prediction.bbox[1] * scaleY;
+
+        const width = prediction.bbox[2] * scaleX;
+        const height = prediction.bbox[3] * scaleY;
+
+
+        ctx.strokeStyle="#2563eb";
+        ctx.lineWidth=3;
+
+
+        ctx.strokeRect(
+            x,
+            y,
+            width,
+            height
+        );
+
+
+        ctx.fillStyle="#2563eb";
+        ctx.font="16px Arial";
+
+
+        ctx.fillText(
+            prediction.class+
+            " "+
+            Math.round(prediction.score*100)+
+            "%",
+            x,
+            y>20 ? y-5 : 20
+        );
+
+
+        const item=document.createElement("div");
+
+        item.className="result-item";
+
+
+        item.innerHTML=
+        prediction.class+
+        " "+
+        Math.round(prediction.score*100)+
+        "%";
+
+
+        results.appendChild(item);
+
+
+    });
+
+
+});

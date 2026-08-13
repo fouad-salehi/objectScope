@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+.detection-section{
+    width:100%;
+    padding:130px 25px 80px;
+    background:#f8fafc;
+}
+
+.detection-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.detection-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.detection-header h1{
+    font-size:42px;
+    color:#111827;
+    margin-bottom:20px;
+}
+
+.detection-header p{
+    font-size:17px;
+    line-height:1.8;
+    color:#4b5563;
+}
+
+.model-status{
+    margin:25px auto;
+    width:max-content;
+    padding:12px 25px;
+    border-radius:12px;
+    background:#f8fafc;
+    color:#2563eb;
+    font-size:16px;
+    font-weight:600;
+}
+
+.upload-box{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-bottom:40px;
+}
+
+.upload-box input{
+    display:none;
+}
+
+.upload-box label{
+    padding:15px 40px;
+    background:#2563eb;
+    color:white;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.upload-box label:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+.image-container{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+#preview-image{
+    width:100%;
+    max-width:900px;
+    display:none;
+}
+
+#detection-canvas{
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.result-box{
+    margin:50px auto 0;
+    max-width:900px;
+    padding:30px;
+    background:white;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.result-box h2{
+    color:#111827;
+    margin-bottom:25px;
+    font-size:28px;
+}
+
+#results{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.result-item{
+    padding:12px 20px;
+    border-radius:10px;
+    background:#eff6ff;
+    color:#2563eb;
+    font-weight:600;
+}
+
+@media(max-width:850px){
+
+    .detection-header h1{
+        font-size:32px;
+    }
+
+    .detection-header p{
+        font-size:15px;
+    }
+
+    .result-box{
+        padding:20px;
+    }
+
+}
