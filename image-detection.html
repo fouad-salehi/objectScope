@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Detection - Object Scope</title>
+
+        <link rel="stylesheet" href="dashboard/assets/css/stylesheet.css">
+        <link rel="stylesheet" href="dashboard/assets/css/detection.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.17.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@2.2.2/dist/coco-ssd.min.js"></script>
+        <script src="dashboard/assets/js/engine.js" defer></script>
+        <script src="dashboard/assets/js/image-detector.js" defer></script>
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="nav-container">
+                <a href="/indexen" class="brand">
+                    <img src="dashboard/assets/images/brandmark.png" alt="Object Scope">
+                    <span>Object Scope</span>
+                </a>
+                <nav class="nav-menu">
+                    <a href="/indexen">Home</a>
+                    <a href="/indexen#features">Features</a>
+                    <a href="/image-detection">Image Detection</a>
+                    <a href="/camera-detection">Camera Detection</a>
+                    <a href="/indexen#proposal">Proposal</a>
+                    <a href="/indexen#about">About</a>
+                </nav>
+                <button class="menu-toggle" id="menu-toggle">
+                    ☰
+                </button>
+            </div>
+        </header>
+        <main>
+            <section class="detection-section">
+                <div class="detection-container">
+                    <div class="detection-header">
+                        <h1>
+                            Image Detection
+                        </h1>
+                        <p>
+                            Upload an image and let artificial intelligence detect objects using COCO-SSD and TensorFlow.js.
+                        </p>
+                    </div>
+                    <div class="model-status" id="model-status">
+                        Loading AI Model...
+                    </div>
+                    <div class="upload-box">
+                        <input type="file" id="image-upload" accept="image/*">
+                        <label for="image-upload">
+                            Select Image
+                        </label>
+                    </div>
+                    <div class="image-container">
+                        <img id="preview-image">
+                        <canvas id="detection-canvas"></canvas>
+                    </div>
+                    <div class="result-box">
+                        <h2>
+                            Detection Results
+                        </h2>
+                        <div id="results">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-container">
+                <p>
+                    Designed and Developed by
+                    <a href="https://github.com/theinternetisahellhole" target="_blank">
+                        Fouad Salehi
+                    </a>
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
