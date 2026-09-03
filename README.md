@@ -21,36 +21,22 @@ Object Scope provides two main detection modes:
 The project also includes a research proposal covering the system architecture, objectives, technologies, implementation approach, and future improvements.
 
 ## Screenshots
-<div align="center">
-  <div style="display: inline-block; border-radius: 24px; overflow: hidden; margin: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-    <a href="https://github.com/user-attachments/assets/44ffd8c4-556c-4af3-8b73-1400f3a54029" target="_blank">
-      <img src="https://github.com/user-attachments/assets/44ffd8c4-556c-4af3-8b73-1400f3a54029" width="400" style="display: block;"/>
-    </a>
-  </div>
-  <div style="display: inline-block; border-radius: 24px; overflow: hidden; margin: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-    <a href="https://github.com/user-attachments/assets/750b1b39-b757-44c6-8e68-5862a1edd132" target="_blank">
-      <img src="https://github.com/user-attachments/assets/750b1b39-b757-44c6-8e68-5862a1edd132" width="400" style="display: block;"/>
-    </a>
-  </div>
+<p align="center">
+  <a href="https://github.com/user-attachments/assets/44ffd8c4-556c-4af3-8b73-1400f3a54029" target="_blank">
+    <img src="https://github.com/user-attachments/assets/44ffd8c4-556c-4af3-8b73-1400f3a54029" width="400" />
+  </a>
+  <a href="https://github.com/user-attachments/assets/750b1b39-b757-44c6-8e68-5862a1edd132" target="_blank">
+    <img src="https://github.com/user-attachments/assets/750b1b39-b757-44c6-8e68-5862a1edd132" width="400" />
+  </a>
   <br/>
-  <div style="display: inline-block; border-radius: 24px; overflow: hidden; margin: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-    <a href="https://github.com/user-attachments/assets/3dea09ec-6784-4980-81f1-77ddedb2c008" target="_blank">
-      <img src="https://github.com/user-attachments/assets/3dea09ec-6784-4980-81f1-77ddedb2c008" width="400" style="display: block;"/>
-    </a>
-  </div>
-  <div style="display: inline-block; border-radius: 24px; overflow: hidden; margin: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-    <a href="https://github.com/user-attachments/assets/5a45ba12-d9a6-42dd-870d-30ecf6fc13a3" target="_blank">
-      <img src="https://github.com/user-attachments/assets/5a45ba12-d9a6-42dd-870d-30ecf6fc13a3" width="400" style="display: block;"/>
-    </a>
-  </div>
-</div>
-فرق این روش با قبلی:
-روش قبلی	روش جدید
-border-radius روی img	border-radius روی div
-گیت‌هاب اجرا نمیکرد	overflow: hidden باعث میشه گوشه‌های img بریده بشن
-گوشه‌ها صاف بودن	گوشه‌ها کاملاً گرد میشن
-اگه بازم نشد (فقط برای گیت‌هاب):
-markdown
+  <a href="https://github.com/user-attachments/assets/3dea09ec-6784-4980-81f1-77ddedb2c008" target="_blank">
+    <img src="https://github.com/user-attachments/assets/3dea09ec-6784-4980-81f1-77ddedb2c008" width="400" />
+  </a>
+  <a href="https://github.com/user-attachments/assets/5a45ba12-d9a6-42dd-870d-30ecf6fc13a3" target="_blank">
+    <img src="https://github.com/user-attachments/assets/5a45ba12-d9a6-42dd-870d-30ecf6fc13a3" width="400" />
+  </a>
+</p>
+
 ## Screenshots
 <p align="center">
   <span style="display:inline-block;border-radius:30px;overflow:hidden;margin:8px;box-shadow:0 4px 16px rgba(0,0,0,0.15);">
